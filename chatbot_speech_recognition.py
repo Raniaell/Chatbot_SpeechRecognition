@@ -64,20 +64,11 @@ def transcribe_speech():
             text = r.recognize_google(audio_data)
             print(audio_data.get_wav_data(), text)
             st.write("Transcription:", text)
+            return text
         except:
             print("Sorry I didn't get that or you run out of time")
             st.write("Sorry I didn't get that/You run out of time")
 
-def get_user_input():
-    print("Choose input type:")
-    print("1. Text")
-    print("2. Speech")
-    choice = input("Enter your choice (1/2): ")
-    
-    if choice == "1":
-        return input("User: ")
-    elif choice == "2":
-          return
 def main():
     st.title("Chatbot with Text/Speech Input")
 
